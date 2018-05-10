@@ -1,0 +1,32 @@
+"pt-BR":
+  activerecord:
+    models:
+      county:
+        one: "Município"
+        other: "Municípios"
+      place:
+        one: "Localidade"
+        other: "Localidades"
+      state:
+        one: "UF"
+        other: "UFs"
+      station:
+        one: "ERB"
+        other: "ERBs"
+      mobile_company:
+        one: "Operadora"
+        other: "Operadoras"
+    attributes:
+      county:
+        name: "Nome"
+        state: "UF"
+        created_at: "Criado em"
+      station:
+        mobile_company: "Operadora"
+        name: "Nome"
+        code: "Código"
+        state: "UF"
+        neighborhood: "Localidade"
+        address: "Endereço"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"

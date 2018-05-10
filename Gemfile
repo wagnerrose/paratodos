@@ -40,6 +40,8 @@ gem 'bower-rails', '~> 0.11.0'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
 gem 'devise-i18n'
+# RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
+gem 'rails_admin', '~> 1.3'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
