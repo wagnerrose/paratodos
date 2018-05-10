@@ -61,6 +61,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Better error page for Rack apps
   gem "better_errors"
+  # A Rails engine for drawing your app's ER diagram
+  gem 'rails-erd'
 end
 
 group :development do
