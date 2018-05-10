@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mobile_company: MyString
+  code: MyString
+  name: MyString
+  state: MyString
+  county: one
+  neighborhood: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  mobile_company: MyString
+  code: MyString
+  name: MyString
+  state: MyString
+  county: two
+  neighborhood: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
