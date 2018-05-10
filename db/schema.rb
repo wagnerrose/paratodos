@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_09_155100) do
+ActiveRecord::Schema.define(version: 2018_05_09_184551) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 2018_05_09_155100) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "counties", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "name", limit: 50
+    t.float "latitude"
+    t.float "longitude"
+    t.bigint "state_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state_id"], name: "index_counties_on_state_id"
   end
 
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
@@ -52,6 +62,17 @@ ActiveRecord::Schema.define(version: 2018_05_09_155100) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "places", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "neighborhood", limit: 50
+    t.string "address", limit: 250
+    t.float "latitude"
+    t.float "longitude"
+    t.bigint "county_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["county_id"], name: "index_places_on_county_id"
+  end
+
   create_table "states", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "state", limit: 2
     t.string "name", limit: 50
@@ -59,4 +80,22 @@ ActiveRecord::Schema.define(version: 2018_05_09_155100) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "stations", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "mobile_company"
+    t.string "code", limit: 15
+    t.string "name", limit: 50
+    t.string "state", limit: 2
+    t.bigint "county_id"
+    t.string "neighborhood", limit: 50
+    t.string "address", limit: 250
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["county_id"], name: "index_stations_on_county_id"
+  end
+
+  add_foreign_key "counties", "states"
+  add_foreign_key "places", "counties"
+  add_foreign_key "stations", "counties"
 end
