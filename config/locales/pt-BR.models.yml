@@ -16,8 +16,19 @@
       mobile_company:
         one: "Operadora"
         other: "Operadoras"
+      anatel_locality:
+        one: "Localidade ANATEL"
+        other: "Localidades ANATEL"
+      admin:
+        one: "Administrador"
+        other: "Administradores"
+      member:
+        one: "Membro"
+        other: "Membros"
+
     attributes:
       county:
+        neighborhood: "Localidade"
         name: "Nome"
         state: "UF"
         created_at: "Criado em"
@@ -30,3 +41,17 @@
         address: "Endereço"
         created_at: "Criado em"
         updated_at: "Atualizado em"
+      place:
+        neighborhood: "Localidade"
+        address: "Endereço"
+      state:
+        state: "UF"
+        name: "Nome"
+        county: "Municípios"
+      mobile_company:
+        name: "Operadora"
+      anatel_locality:
+        placeInitials: "Sigla Localidade"
+        place: "Localidade"
+        county: "Município"
+        countyInitials: "Sigla Município"

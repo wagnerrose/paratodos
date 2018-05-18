@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_10_135409) do
+ActiveRecord::Schema.define(version: 2018_05_11_150145) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name", null: false
@@ -48,6 +48,19 @@ ActiveRecord::Schema.define(version: 2018_05_10_135409) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "anatel_localities", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "placeInitials", limit: 4
+    t.string "place", limit: 50
+    t.string "county", limit: 50
+    t.string "countyInitials", limit: 4
+    t.bigint "state_id"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state_id"], name: "index_anatel_localities_on_state_id"
   end
 
   create_table "counties", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
@@ -116,6 +129,7 @@ ActiveRecord::Schema.define(version: 2018_05_10_135409) do
     t.index ["county_id"], name: "index_stations_on_county_id"
   end
 
+  add_foreign_key "anatel_localities", "states"
   add_foreign_key "counties", "states"
   add_foreign_key "places", "counties"
   add_foreign_key "stations", "counties"
