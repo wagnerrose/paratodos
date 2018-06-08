@@ -24,6 +24,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+# Jquery
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -65,6 +68,9 @@ group :development, :test do
   gem "better_errors"
   # A Rails engine for drawing your app's ER diagram
   gem 'rails-erd'
+  #Rails >= 3 pry initializer
+  gem 'pry-rails'
+
 end
 
 group :development do

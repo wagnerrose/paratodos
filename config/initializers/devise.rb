@@ -20,6 +20,9 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'wagner.rose@telebras.com.br'
 
+  config.secret_key = '004a4f3aa7359c6feb2e27f8edcbbdae015f72f416b1a714196e1b0555be2b377f51da176c7c9afd6b3f6cc2e566a0c501c2db43cea9e802b39b3373d8f45ac7'
+
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
