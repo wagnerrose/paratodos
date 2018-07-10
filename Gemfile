@@ -85,7 +85,8 @@ group :development do
   gem 'capistrano',  '~> 3.1', require: false
   gem 'capistrano-rails', '~> 1.1', require: false
   gem 'capistrano-rbenv', '~> 2.1'
-  gem 'capistrano-passenger', '~> 0.2.0'
+#  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-locally', require: false
 
 end
 

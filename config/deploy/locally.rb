@@ -7,6 +7,10 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
+server 'localhost', roles: %(app web)
+
+#set :stage, :production
+#set :rails_env, :production
 
 
 # role-based syntax
@@ -20,6 +24,8 @@
 # role :app, %w{deploy@example.com}, my_property: :my_value
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
+
+role :app, ""
 
 
 
@@ -59,15 +65,3 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-
-set :stage, :staging
-set :rails_env, :staging
-set :branch, "master"
-
-
-role :app, %w{127.0.0.1}
-role :web, %w{127.0.0.1}
-role :db,  %w{127.0.0.1}
-
-server '127.0.0.1', user: 'wagner', roles: %w{web app}
-set :branch, "staging"
