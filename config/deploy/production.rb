@@ -27,6 +27,10 @@ server 'localhost', roles: %(app db web)
 
 role :app, ""
 
+#### configuracao do passenger restart
+set :passenger_restart_command, 'passenger-config restart-app'
+set :passenger_restart_options, -> { "#{deploy_to} --ignore-app-not-running" }
+
 
 
 # Configuration
