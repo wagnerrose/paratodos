@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
 #
-gem 'bundler', '>= 1.8.4'
+#gem 'bundler', '>= 1.8.4'
 
 source 'https://rails-assets.org' do
   # gem bootstrap4
@@ -83,7 +83,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   #Remote multi-server automation tool http://www.capistranorb.com
   gem 'capistrano',  '~> 3.1', require: false
-  gem 'capistrano-rails', '~> 1.1', require: false
   gem 'capistrano-rbenv', '~> 2.1'
 #  gem 'capistrano-passenger', '~> 0.2.0'
   gem 'capistrano-locally', require: false

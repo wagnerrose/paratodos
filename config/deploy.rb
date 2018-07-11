@@ -23,12 +23,12 @@ set :deploy_to, "/var/www/html/paratodos"
 set :deploy_via, :copy
 
 # Default value for :linked_files is []
-#append :linked_files, "config/database.yml", "config/master.key"
+append :linked_files, "config/database.yml", "config/master.key"
 
 # Default value for linked_dirs is []
-#append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
-#set :local_user, "wagner"
+#set :local_user, "www-data"
 
 # set passenger variable
 set :passenger_environment_variables, { :path => '/home/wagner/.rbenv/shims/passenger:$PATH' }
