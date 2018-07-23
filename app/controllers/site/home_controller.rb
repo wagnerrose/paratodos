@@ -1,11 +1,9 @@
-class Site::HomeController < ApplicationController
+module Site
+  class HomeController < ApplicationController
 
-	layout "site"
-  def index
+  	layout "site"
+
+    def index
+    end
   end
-
-  def analyze
-    @county = County.all
-  end
-
 end

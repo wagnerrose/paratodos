@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   namespace :site do
     get 'home/index'
-    get 'home/analyze'
+    get 'analyzes/index'
+    get 'analyzes/show'
+#    get 'analyzes /update_counties', as: 'update_counties'
   end
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 

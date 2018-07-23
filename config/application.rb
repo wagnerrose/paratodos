@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+
 module Paratodos
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -18,5 +20,8 @@ module Paratodos
     config.time_zone = 'Brasilia'
     config.i18n.default_locale = "pt-BR"
     config.encoding = "utf-8"
+
+    ## liberando rede
+    config.web_console.whitelisted_ips = '10.0.0.0/16'
   end
 end

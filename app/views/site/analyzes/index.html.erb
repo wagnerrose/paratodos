@@ -1,0 +1,32 @@
+<!-- Navigation -->
+
+<!-- Download Section -->
+<section id="analise" class="analysis-section content-section text-center">
+  <div class="container">
+    <div class="col-lg-8 mx-auto">
+      <h2>Análise de distâncias</h2>
+      <p>Este tópico analisa as distâncias das localidades informadas pelas prefeituras até
+      as estações de rádio das operadoras de celular na localidade.</p>
+
+        <%= form_for :localidade do |f|%>
+        <div>
+          <div>
+            <%= f.collection_select :state,
+                          State.order(:name),
+                          :id, :name,
+                          include_blank: true %>
+          </div>
+          <div>
+            <%= f.grouped_collection_select :county,
+                          State.order(:name),
+                          :counties, :name,
+                          :id, :name,
+                          include_blank: true %>
+          </div>
+        </div>
+          <div><%= f.submit "Atualiza Análise" %></div>
+        <% end %>
+
+    </div>
+  </div>
+</section>
