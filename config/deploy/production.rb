@@ -9,8 +9,8 @@
 
 server 'localhost', roles: %(app db web)
 
-#set :stage, :production
-#set :rails_env, :production
+set :stage, :production
+set :rails_env, :production
 #set :branch, "master"
 
 # role-based syntax

@@ -1,0 +1,5 @@
+
+# app/views/welcome/update_cities.js.coffee
+
+$("#counties_select").empty()
+  .append("<%= escape_javascript(render(:partial => @counties)) %>")

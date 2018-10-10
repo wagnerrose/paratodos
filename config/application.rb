@@ -21,7 +21,9 @@ module Paratodos
     config.i18n.default_locale = "pt-BR"
     config.encoding = "utf-8"
 
-    ## liberando rede
-    config.web_console.whitelisted_ips = '10.0.0.0/16'
+    unless Rails.env.production?
+        ## liberando rede
+        config.web_console.whitelisted_ips = ['120.0.0.1','10.0.0.0/16']
+    end
   end
 end
