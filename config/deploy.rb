@@ -7,6 +7,7 @@ set :use_sudo, false
 set :application, "paratodos"
 set :repo_url, "https://github.com/wagnerrose/paratodos.git"
 set :repository, "."
+set :rails_env, "production"
 
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
