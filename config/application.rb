@@ -23,7 +23,7 @@ module Paratodos
 
     unless Rails.env.production?
         ## liberando rede
-        config.web_console.whitelisted_ips = ['120.0.0.1','10.0.0.0/16']
+        config.web_console.whitelisted_ips = ['127.0.0.1','10.0.0.0/16']
     end
   end
 end

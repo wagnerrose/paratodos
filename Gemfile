@@ -7,6 +7,9 @@ gem 'bundler', '>= 1.8.4'
 
 gem 'passenger'
 
+# add gem to paginate table
+gem 'will_paginate'
+
 source 'https://rails-assets.org' do
   # gem bootstrap4
   gem 'rails-assets-bootstrap'
@@ -39,7 +42,7 @@ gem 'jbuilder', '~> 2.5'
 # Internaionalizacao Rails-i18n
 gem 'rails-i18n'
 # Complete Ruby geocoding solution
-gem 'geocoder'
+# gem 'geocoder'
 # Bundler-like DSL + rake tasks for Bower on Rails
 gem 'bower-rails', '~> 0.11.0'
 # Flexible authentication solution for Rails with Warden.

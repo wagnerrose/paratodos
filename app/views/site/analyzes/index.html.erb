@@ -1,7 +1,7 @@
 <!-- Navigation -->
 
 <!-- Download Section -->
-<section id="analise" class="analysis-section content-section text-center">
+<section id="selecao" class="analysis-section content-section text-center">
   <div class="container">
     <div class="col-lg-8 mx-auto">
       <h2>Análise de distâncias</h2>
@@ -21,16 +21,19 @@
                         :counties, :name,
                         :id, :name,
                         include_blank: true  %>
-            <%= link_to 'Show', site_analyzes_show_path, remote: true %>
         <% end %>
-      </div>
+        <div>
+          <%= link_to 'Show', site_analyzes_index_path, remote: true%>
+        </div>
+       </div>
     </div>
 </section>
 
-<section id="analise" class="content-section">
+<section id="tabela" class="content-section text-center">
   <div class="container col-lg-12  mx-auto">
     <br>
-    <div class="col-lg-4"></div>
-    <div id="div_tabela" class="table center col-lg-8"></div>
+    <div id="results">
+
+    </div>
   </div>
 </section>

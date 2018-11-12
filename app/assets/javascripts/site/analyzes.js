@@ -19,3 +19,4 @@ $(document).on("change", "#localidade_state", function(){
     }
   });
 });
+

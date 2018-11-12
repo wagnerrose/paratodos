@@ -1,14 +1,13 @@
 module Site
   class AnalyzesController < ApplicationController
 
-    #before_action :set_state, only: [:show]
+    before_action :set_state, only: [:show]
 
     layout "site"
 
     def index
       @states = State.all
-      @counties = []
-
+      #@counties = []
       if params[:state].present?
         @counties = State.find(params[:state]).counties
         if request.xhr?
@@ -19,13 +18,20 @@ module Site
           end
         end
       end
+      if params[:county].present?
+        @places = County.find(params[:county]).places
+        respond_to  do |format|
+            format.js { head :ok}
+        end
+      end
     end
 
     def show
-      @places = County.find(params[:county]).places
-      respond_to do |format|
-        format.js {render layout: false} # Add this line to you respond_to block
-      end
+
+    end
+
+    def update_analyze
+
     end
 
     def state_params

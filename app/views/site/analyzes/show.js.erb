@@ -1,1 +1,2 @@
-$("#div_tabela").html("<%= escape_javascript(render partial: 'analyze/show', locals: { places: @places } ) %>");
+document.getElementById("results").innerHTML = '';
+$('#results').html("<%= ("<%= escape_javascript(render partial:'site/analyzes/show', locals: { places: @places}) %>");
