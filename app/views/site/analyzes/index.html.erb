@@ -9,22 +9,17 @@
       as estações de rádio das operadoras de celular na localidade.</p>
     </div>
     <div>
-      <%= form_for :localidade do |f|%>
-          <%= f.label :state %>
-          <%= f.collection_select :state,
-                        State.order(:name),
-                        :id, :name,
-                        include_blank: true %>
-          <%= f.label :county %>
-          <%= f.grouped_collection_select :county,
-                        State.order(:name),
-                        :counties, :name,
-                        :id, :name,
+      <%= form_tag site_update_analyze_path, method: :get, remote: true do %>
+          <%= label_tag 'lbl_state', 'Estado' %>
+          <%= select_tag 'sel_state', options_for_select(
+            @states.collect{ |s| [s.name, s.id]},
+                        include_blank: true) %>
+          <%= label_tag 'lbl_county', 'Município' %>
+          <%= select_tag 'sel_county', options_from_collection_for_select(@states,
+                        :id, :name),
                         include_blank: true  %>
+          <%= submit_tag 'Search' %>
         <% end %>
-        <div>
-          <%= link_to 'Show', site_analyzes_index_path, remote: true%>
-        </div>
        </div>
     </div>
 </section>

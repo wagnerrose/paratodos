@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   namespace :site do
     get 'home/index'
     get 'analyzes/index'
-    get 'analyzes/show'
+    get 'analyzes/update_analyze', to: 'analyzes#update_analyze', as: 'update_analyze'
 #    get 'analyzes /update_counties', as: 'update_counties'
   end
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

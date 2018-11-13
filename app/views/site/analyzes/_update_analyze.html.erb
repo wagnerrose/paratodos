@@ -5,10 +5,7 @@
       <strong id="notice"><%= notice %></strong>
   </div>
 <% end %>
-<h1>Teste</h1>
 <% if ! localidades.nil? %>
-  <h1>Passei </h1>
-  <% byebug %>
   <table class="table display">
     <thead>
         <th>Localidade</th>
@@ -24,7 +21,6 @@
           <td><%= local.address %></td>
           <td><%= local.latitude %></td>
           <td><%= local.longitude %></td>
-          <% byebug %>
         </tr>
       <% end %>
     </tbody>

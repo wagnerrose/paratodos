@@ -6,8 +6,9 @@ module Site
     layout "site"
 
     def index
-      @states = State.all
-      #@counties = []
+      @states = State.all.order(:name)
+      #@places = Place.all
+      #@counties = County.all
       if params[:state].present?
         @counties = State.find(params[:state]).counties
         if request.xhr?
@@ -18,20 +19,17 @@ module Site
           end
         end
       end
-      if params[:county].present?
-        @places = County.find(params[:county]).places
-        respond_to  do |format|
-            format.js { head :ok}
-        end
-      end
     end
 
     def show
 
-    end
+   end
 
     def update_analyze
-
+        @places = Place.where(county_id: params[:sel_county])
+        respond_to do |format|
+          format.js
+        end
     end
 
     def state_params

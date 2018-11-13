@@ -1,4 +1,4 @@
-$(document).on("change", "#localidade_state", function(){
+$(document).on("change", "#sel_state", function(){
   var state = $(this).val();
   $.ajax({
     url: "./index",
@@ -11,10 +11,10 @@ $(document).on("change", "#localidade_state", function(){
     success: function (response) {
       console.log(response);
       var counties = response["counties"];
-      $("#localidade_county").empty();
-      $("#localidade_county").append('<option>Selecione Localidade</option>');
+      $("#sel_county").empty();
+      $("#sel_county").append('<option>Selecione Localidade</option>');
       for(var i=0; i< counties.length; i++){
-        $("#localidade_county").append('<option value="' + counties[i]["id"] + '">' + counties[i]["name"] + '</option>');
+        $("#sel_county").append('<option value="' + counties[i]["id"] + '">' + counties[i]["name"] + '</option>');
       }
     }
   });
