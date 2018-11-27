@@ -16,7 +16,17 @@ $(document).on("change", "#sel_state", function(){
       for(var i=0; i< counties.length; i++){
         $("#sel_county").append('<option value="' + counties[i]["id"] + '">' + counties[i]["name"] + '</option>');
       }
+      $("#sel_county").prop("disabled", false);
+      $("#btn_procura").removeClass('disabled');
     }
   });
 });
+$(document).ready(function() {
+    $("#sel_county").prop("disabled", true);
+    $("#btn_procura").addClass('disabled');
+});
 
+$(window).on(function() {
+    $("#sel_county").prop("disabled", true);
+    $("#btn_procura").addClass('disabled');
+});

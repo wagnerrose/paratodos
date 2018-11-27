@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">Telebras S.A.</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,18 +7,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#sobre">Sobre</a>
+         <li class="nav-item">
+          <%= link_to "Sobre", site_home_index_path(anchor: 'sobre') ,
+              class: "nav-link js-scroll-trigger" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#analise">Análise</a>
+          <%= link_to "Análise", site_home_index_path(anchor: 'analise') ,
+              class: "nav-link js-scroll-trigger" %>
         </li>
          <li class="nav-item">
           <%= link_to "Administração", rails_admin_path,
               class: "nav-link js-scroll-trigger" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+          <%= link_to "Contato", site_home_index_path(anchor: 'contact') ,
+              class: "nav-link js-scroll-trigger" %>
         </li>
       </ul>
     </div>

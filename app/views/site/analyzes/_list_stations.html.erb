@@ -1,0 +1,23 @@
+  <h5 class="text-center"><%= localidade %> </h5>
+  <table class="table table-hover ">
+    <thead>
+        <th>Distância da localidade</th>
+        <th>Operadora</th>
+        <th>Estação</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+    </thead>
+
+    <tbody>
+      <% estacoes.each do |estacao| %>
+        <tr>
+          <% byebug %>
+          <td><%= distancia(estacao.latitude, estacao.longitude, localidade.latitude, localidade.longitude) %> Kms</td>
+          <td><%= estacao.mobile_company %></td>
+          <td><%= estacao.name %></td>
+          <td><%= estacao.latitude %></td>
+          <td><%= estacao.longitude %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

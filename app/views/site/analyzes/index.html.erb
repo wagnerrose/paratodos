@@ -8,27 +8,29 @@
       <p>Este tópico analisa as distâncias das localidades informadas pelas prefeituras até
       as estações de rádio das operadoras de celular na localidade.</p>
     </div>
-    <div>
-      <%= form_tag site_update_analyze_path, method: :get, remote: true do %>
-          <%= label_tag 'lbl_state', 'Estado' %>
-          <%= select_tag 'sel_state', options_for_select(
-            @states.collect{ |s| [s.name, s.id]},
-                        include_blank: true) %>
-          <%= label_tag 'lbl_county', 'Município' %>
-          <%= select_tag 'sel_county', options_from_collection_for_select(@states,
-                        :id, :name),
-                        include_blank: true  %>
-          <%= submit_tag 'Search' %>
-        <% end %>
-       </div>
+
     </div>
 </section>
 
 <section id="tabela" class="content-section text-center">
   <div class="container col-lg-12  mx-auto">
+    <div>
+      <%= form_tag site_update_analyze_path, method: :get, remote: true do %>
+        <%= label_tag 'lbl_state', 'Estado:', style: "margin: 10px" %>
+        <%= select_tag 'sel_state', options_for_select(
+          @states.collect{ |s| [s.name, s.id]},
+                      include_blank: true) %>
+        <%= label_tag 'lbl_county', 'Município:', style: "margin: 10px" %>
+        <%= select_tag 'sel_county', options_from_collection_for_select(@states,
+                      :id, :name),
+                      include_blank: true  %>
+        <%= submit_tag 'Search', id: 'btn_procura', class: "btn-default" %>
+      <% end %>
+   </div>
     <br>
     <div id="results">
 
     </div>
+
   </div>
 </section>

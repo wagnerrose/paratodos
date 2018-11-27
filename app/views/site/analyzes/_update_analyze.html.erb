@@ -6,23 +6,29 @@
   </div>
 <% end %>
 <% if ! localidades.nil? %>
-  <table class="table display">
+
+    <h1 class="text-center"><%= municipio.name %></h1>
+    <h5 class="text-center">Latitude:<%= municipio.latitude %> - Longitude: <%= municipio.longitude %></h5>
+
+  <table class="table table-hover ">
     <thead>
+        <th>Distância da sede</th>
         <th>Localidade</th>
-        <th>Endereço</th>
         <th>Latitude</th>
         <th>Longitude</th>
     </thead>
 
     <tbody>
       <% localidades.each do |local| %>
+
         <tr>
+          <td><%= distancia(municipio.latitude, municipio.longitude, local.latitude, local.longitude) %> Kms</td>
           <td><%= local.neighborhood %></td>
-          <td><%= local.address %></td>
           <td><%= local.latitude %></td>
           <td><%= local.longitude %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+
 <% end %>

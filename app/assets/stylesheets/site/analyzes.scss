@@ -230,6 +230,7 @@ a:focus, a:hover {
 }
 
 .btn-default {
+  margin: 10px;
   color: #42DCA3;
   border: 1px solid #42DCA3;
   background-color: transparent;
@@ -241,6 +242,12 @@ a:focus, a:hover {
   outline: none;
   background-color: #42DCA3;
 }
+// desabilita botões
+.disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
 
 ul.banner-social-buttons {
   margin-top: 0;

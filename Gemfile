@@ -41,13 +41,20 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Internaionalizacao Rails-i18n
 gem 'rails-i18n'
+
 # Complete Ruby geocoding solution
 # gem 'geocoder'
 # Bundler-like DSL + rake tasks for Bower on Rails
+
+# Gem para calculo de distancias
+gem 'loc'
+
 gem 'bower-rails', '~> 0.11.0'
+
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
 gem 'devise-i18n'
+
 # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
 gem 'rails_admin', '~> 1.3'
 
