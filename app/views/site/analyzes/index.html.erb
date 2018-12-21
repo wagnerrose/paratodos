@@ -8,13 +8,12 @@
       <p>Este tópico analisa as distâncias das localidades informadas pelas prefeituras até
       as estações de rádio das operadoras de celular na localidade.</p>
     </div>
-
-    </div>
+  </div>
 </section>
 
 <section id="tabela" class="content-section text-center">
   <div class="container col-lg-12  mx-auto">
-    <div>
+    <div id="form_procura">
       <%= form_tag site_update_analyze_path, method: :get, remote: true do %>
         <%= label_tag 'lbl_state', 'Estado:', style: "margin: 10px" %>
         <%= select_tag 'sel_state', options_for_select(
@@ -23,8 +22,9 @@
         <%= label_tag 'lbl_county', 'Município:', style: "margin: 10px" %>
         <%= select_tag 'sel_county', options_from_collection_for_select(@states,
                       :id, :name),
+                      disabled: :disabled,
                       include_blank: true  %>
-        <%= submit_tag 'Search', id: 'btn_procura', class: "btn-default" %>
+        <%= submit_tag 'Procura', id: 'btn_procura', class: "btn-default", disabled: :disabled %>
       <% end %>
    </div>
     <br>

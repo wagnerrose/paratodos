@@ -28,7 +28,7 @@ module Site
     def update_analyze
         @places = Place.where(county_id: params[:sel_county])
         @county = County.find(params[:sel_county])
-        #@stations = County.find(params[:sel_county]).stations
+        @stations = County.find(params[:sel_county]).stations
         respond_to do |format|
           format.js
         end

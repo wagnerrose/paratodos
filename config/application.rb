@@ -25,5 +25,13 @@ module Paratodos
         ## liberando rede
         config.web_console.whitelisted_ips = ['127.0.0.1','10.0.0.0/16']
     end
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'localhost:3000'
+        resource '*', headers: :any, methods: [:get, :post, :options]
+      end
+    end
+
   end
 end

@@ -55,3 +55,33 @@
         place: "Localidade"
         county: "Município"
         countyInitials: "Sigla Município"
+      admin:
+        email: "E-mail"
+        encrypted_password: "Senha Criptografada"
+        reset_password_token: "Reset de Senha"
+        reset_password_sent_at: "Reset de Senha enviada"
+        remember_created_at: "Senha Criptografada"
+        sign_in_count: "Contagem de Acessos"
+        current_sign_in_at: "Acesso atual em"
+        last_sign_in_at: "Último Acesso em"
+        current_sign_in_ip: "Ip de Acesso Atual"
+        last_sign_in_ip: "Último IP de Acesso"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      member:
+        email: "E-mail"
+        encrypted_password: "Senha Criptografada"
+        reset_password_token: "Reset de Senha"
+        reset_password_sent_at: "Reset de Senha enviada"
+        remember_created_at: "Senha Criptografada"
+        sign_in_count: "Contagem de Acessos"
+        current_sign_in_at: "Acesso atual em"
+        last_sign_in_at: "Último Acesso em"
+        current_sign_in_ip: "Ip de Acesso Atual"
+        last_sign_in_ip: "Último IP de Acesso"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+
+
+
+

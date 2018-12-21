@@ -16,16 +16,20 @@
         <th>Localidade</th>
         <th>Latitude</th>
         <th>Longitude</th>
+        <th>Operadora</th>
+        <th>Menor Distância</th>
     </thead>
 
     <tbody>
       <% localidades.each do |local| %>
-
+        <% operadora = dist_operadora(local, estacoes)%>
         <tr>
-          <td><%= distancia(municipio.latitude, municipio.longitude, local.latitude, local.longitude) %> Kms</td>
+          <td><%= distancia(municipio.latitude, municipio.longitude, local.latitude, local.longitude) %> Km</td>
           <td><%= local.neighborhood %></td>
           <td><%= local.latitude %></td>
           <td><%= local.longitude %></td>
+          <td><%= operadora[0] %></td>
+          <td><%= '%.2f' % operadora[1] %> Km</td>
         </tr>
       <% end %>
     </tbody>

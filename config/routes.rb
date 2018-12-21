@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get 'analyzes/update_analyze', to: 'analyzes#update_analyze', as: 'update_analyze'
 #    get 'analyzes /update_counties', as: 'update_counties'
   end
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/railsadmin', as: 'rails_admin'
 
   devise_for :admins
   devise_for :members

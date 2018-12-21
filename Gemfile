@@ -10,13 +10,6 @@ gem 'passenger'
 # add gem to paginate table
 gem 'will_paginate'
 
-source 'https://rails-assets.org' do
-  # gem bootstrap4
-  gem 'rails-assets-bootstrap'
-  # A simple, versatile notification library
-  gem 'rails-assets-notifyjs'
-end
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use mysql as the database for Active Record
@@ -27,24 +20,19 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
-# Jquery
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+
+# gem jquery-rails
+gem 'jquery-rails'
+
 gem 'jbuilder', '~> 2.5'
 # Internaionalizacao Rails-i18n
 gem 'rails-i18n'
-
-# Complete Ruby geocoding solution
-# gem 'geocoder'
-# Bundler-like DSL + rake tasks for Bower on Rails
 
 # Gem para calculo de distancias
 gem 'loc'
@@ -52,27 +40,20 @@ gem 'loc'
 gem 'bower-rails', '~> 0.11.0'
 
 # Flexible authentication solution for Rails with Warden.
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise'
 gem 'devise-i18n'
 
 # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
-gem 'rails_admin', '~> 1.3'
-
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'rails_admin'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'webpacker'
 
+gem 'binding_of_caller'
+# solução de CORS
+gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
